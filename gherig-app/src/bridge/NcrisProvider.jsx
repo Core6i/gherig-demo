@@ -225,7 +225,11 @@ export function useNcrisHealth() {
     (async () => {
       try {
         const res = await fetch('/healthz');
-        const banner = await fetch('/').then(r => r.json()).catch(() => null);
+        const NCRIS_BASE = import.meta.env.VITE_NCRIS_URL || '';
+
+const banner = await fetch(`${NCRIS_BASE}/`)
+  .then(r => r.json())
+  .catch(() => null);
         if (alive) setStatus({ ok: res.ok, banner });
       } catch (err) {
         if (alive) setStatus({ ok: false, error: err.message });
