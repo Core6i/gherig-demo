@@ -14,7 +14,7 @@ const TOKEN_KEY = 'ncris.token';
 const USER_KEY = 'ncris.user';
 
 export class NcrisClient {
-  constructor({ baseUrl = '' } = {}) {
+  constructor({ baseUrl = import.meta.env.VITE_NCRIS_URL || '' } = {}) {
     // Empty baseUrl uses the proxy in dev / same-origin in prod.
     this.baseUrl = baseUrl;
     this.token = sessionStorage.getItem(TOKEN_KEY) || null;
