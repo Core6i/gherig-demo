@@ -254,7 +254,7 @@ function NcrisHealthChip({ health }) {
       display: 'inline-flex', alignItems: 'center', gap: 8,
       padding: '8px 14px', borderRadius: 100,
       background: ok ? '#ECFDF5' : checking ? '#FEF3C7' : '#FEF2F2',
-      color: ok ? '#065F46' : checking ? '#92400E' : '#991B1B',
+      color: ok ? '#065F46' : checking ? '#92400E' : '#6B7280',
       fontSize: 12, fontWeight: 500,
       margin: '0 auto', display: 'flex', maxWidth: 'fit-content',
     }}>
