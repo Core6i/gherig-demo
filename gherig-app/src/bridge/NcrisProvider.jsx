@@ -224,7 +224,7 @@ export function useNcrisHealth() {
     let alive = true;
     (async () => {
       try {
-        const res = await fetch('/healthz');
+        const res = await fetch(`${import.meta.env.VITE_NCRIS_URL}/healthz`);
         const NCRIS_BASE = import.meta.env.VITE_NCRIS_URL || '';
 
 const banner = await fetch(`${NCRIS_BASE}/`)
