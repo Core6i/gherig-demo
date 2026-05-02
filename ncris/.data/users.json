@@ -1,0 +1,136 @@
+[
+  {
+    "username": "admin",
+    "passwordHash": "scrypt$16384$8$1$94b0ccd98ad252db4a5f0179b99df3e7$52beee29fc04e6af21b857a07bdac55fb8048cb074b9abdf6fd4120c826e1dc5c6bd800cfa88355fba73d1eca7c1ecb786d1995b93ab98ef2be37771e4895913",
+    "role": "admin",
+    "facility": null,
+    "region": "all",
+    "vehicleId": null,
+    "scopes": [
+      "admin:*"
+    ],
+    "active": true,
+    "id": "634d2f89-e621-4f66-aee0-8b76f0bce835",
+    "createdAt": "2026-05-02T10:26:28.712Z",
+    "updatedAt": "2026-05-02T10:26:28.712Z"
+  },
+  {
+    "username": "kbth.tablet",
+    "passwordHash": "scrypt$16384$8$1$8ff2dc9c2935bcbefea961a79899d350$c447732baac40e3b5776de14b31f2e41f20342a363036de7c4261ae642f9e071e8e28fd753e6c268ea212cdcfc95a9a7c78e3f8ca96ca95a8d1bb587b52910b7",
+    "role": "doctor",
+    "facility": "KBTH-001",
+    "region": "GA",
+    "vehicleId": null,
+    "scopes": [
+      "referral:create",
+      "observation:create"
+    ],
+    "active": true,
+    "id": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "createdAt": "2026-05-02T10:26:28.733Z",
+    "updatedAt": "2026-05-02T10:26:28.733Z"
+  },
+  {
+    "username": "kbth.portal",
+    "passwordHash": "scrypt$16384$8$1$e872448ea46128a4ea2a2a2133fac447$7b9e391ba66e92204193146da8aae3db51d4938f8bf0605047dd16095c7339d7d0f7eb4929cafc59b76425ea2f204156c0c60a4b09e59d651f592dfee0105bfe",
+    "role": "doctor",
+    "facility": "KBTH-001",
+    "region": "GA",
+    "vehicleId": null,
+    "scopes": [
+      "referral:read",
+      "referral:accept",
+      "referral:decline",
+      "capacity:update"
+    ],
+    "active": true,
+    "id": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "createdAt": "2026-05-02T10:26:28.753Z",
+    "updatedAt": "2026-05-02T10:26:28.753Z"
+  },
+  {
+    "username": "necc.operator",
+    "passwordHash": "scrypt$16384$8$1$ec9d0447727e1cba0dcf7d8d6e025aab$66846c290ea5889f4f09fdb3d69724fff342c25d36665276cc669102fdb912cfc7a41e774871486c749f9d0ab5f2ca48650188e69946abbaa5de4e12a7eee8a0",
+    "role": "necc_operator",
+    "facility": null,
+    "region": "all",
+    "vehicleId": null,
+    "scopes": [
+      "referral:read",
+      "bedsearch:run",
+      "escalation:*",
+      "capacity:read"
+    ],
+    "active": true,
+    "id": "7dfb6e51-196d-4569-a7e6-6fab28fed10c",
+    "createdAt": "2026-05-02T10:26:28.772Z",
+    "updatedAt": "2026-05-02T10:26:28.772Z"
+  },
+  {
+    "username": "arcs.ga.dispatcher",
+    "passwordHash": "scrypt$16384$8$1$192c607474f77f35570e436fa5a432a2$38e870316439ee7d51ed47a1b8df2c311c7cf5206738bd4628082b7de3ae8050e470c0d4a9c31efbe18f18d2e5017714f1d2b4664c8e217b8360f9111fb5b556",
+    "role": "arcs_dispatcher",
+    "facility": null,
+    "region": "GA",
+    "vehicleId": null,
+    "scopes": [
+      "dispatch:read",
+      "dispatch:assign",
+      "brokerage:request"
+    ],
+    "active": true,
+    "id": "c079548f-2410-4c7f-b16a-7c3d1c74cb25",
+    "createdAt": "2026-05-02T10:26:28.791Z",
+    "updatedAt": "2026-05-02T10:26:28.791Z"
+  },
+  {
+    "username": "nas.hq",
+    "passwordHash": "scrypt$16384$8$1$89657e88ab0f97e3f980e5a8fb4ab19f$eaf57cd92b56fe938b5f7bfc5dc10b41f029d5acec884c7a73da7501eadae1e8ca1a954fab9f59e8b35057b0248ba784851c451df52f895731f7779461bfaea3",
+    "role": "nas_hq",
+    "facility": null,
+    "region": "all",
+    "vehicleId": null,
+    "scopes": [
+      "dispatch:read",
+      "brokerage:approve",
+      "brokerage:reject"
+    ],
+    "active": true,
+    "id": "56a148fd-7d0d-47b5-8e84-d5ecaa35ec7e",
+    "createdAt": "2026-05-02T10:26:28.810Z",
+    "updatedAt": "2026-05-02T10:26:28.810Z"
+  },
+  {
+    "username": "emt.gr002",
+    "passwordHash": "scrypt$16384$8$1$676928a9fa56ef83e07d8fed2e8f97eb$48d8263f1e7496c34e9f202b4c6a3f037b9e17b01eec10a39a679b3e97081de182a3987ad36f7866e1adccd8cd2986cd01a944728592fd95d8ee3a7492eb3854",
+    "role": "emt",
+    "facility": null,
+    "region": "GA",
+    "vehicleId": "AMB-GR-002",
+    "scopes": [
+      "dispatch:read",
+      "dispatch:transition",
+      "observation:create"
+    ],
+    "active": true,
+    "id": "e1214815-11ae-44f7-8b65-e59e7e527f8d",
+    "createdAt": "2026-05-02T10:26:28.829Z",
+    "updatedAt": "2026-05-02T10:26:28.829Z"
+  },
+  {
+    "username": "auditor.general",
+    "passwordHash": "scrypt$16384$8$1$a09d84bdf014f24bda6a514f3235e71b$c0a06261fddca0c4fc99e4b33c025444e70dcb487e5fa3fbbbcfa3bb8bea8e558264a08f104337847763c1a59f22d4d16307f033d83fffd3be43ade1dfdabbaa",
+    "role": "auditor",
+    "facility": null,
+    "region": "all",
+    "vehicleId": null,
+    "scopes": [
+      "audit:read",
+      "audit:verify"
+    ],
+    "active": true,
+    "id": "877198eb-3fea-4862-b72d-d3a4c657b20f",
+    "createdAt": "2026-05-02T10:26:28.847Z",
+    "updatedAt": "2026-05-02T10:26:28.847Z"
+  }
+]

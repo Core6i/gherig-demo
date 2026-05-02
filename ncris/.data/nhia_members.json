@@ -1,0 +1,38 @@
+[
+  {
+    "id": "NHIA-1",
+    "membershipNumber": "7821-4523-9018",
+    "name": "Kofi Asante",
+    "dob": "1967-04-12",
+    "sex": "M",
+    "status": "active",
+    "expiresOn": "2027-03-15",
+    "package": "standard",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  },
+  {
+    "id": "NHIA-2",
+    "membershipNumber": "8923-1145-2237",
+    "name": "Ama Boatemaa",
+    "dob": "1996-11-03",
+    "sex": "F",
+    "status": "active",
+    "expiresOn": "2026-09-22",
+    "package": "standard",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  },
+  {
+    "id": "NHIA-3",
+    "membershipNumber": "4451-8821-1109",
+    "name": "Mensah Sarfo",
+    "dob": "2018-07-20",
+    "sex": "M",
+    "status": "active",
+    "expiresOn": "2027-06-30",
+    "package": "paediatric",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  }
+]

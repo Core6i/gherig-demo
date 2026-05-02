@@ -1,0 +1,370 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "NCRIS — National Clinical Referral & Intelligence Switch",
+    "version": "1.0.0",
+    "description": "Backend API for the GhERIG (Ghana Emergency Referral & Intelligence Grid) programme. NCRIS is the message switch and integration spine that connects the five user-facing subsystems (Tablet, Hospital Portal, NECC Command Centre, ARCS Dispatch, EMT Device) and exposes a FHIR R4 interface for external partners.",
+    "contact": {
+      "name": "GhERIG Programme — Ministry of Health, Ghana",
+      "email": "ncris-integrations@moh.gov.gh"
+    },
+    "license": { "name": "Government of Ghana — Restricted" }
+  },
+  "servers": [
+    { "url": "https://ncris.gov.gh", "description": "Production" },
+    { "url": "https://ncris-staging.gov.gh", "description": "Staging" },
+    { "url": "http://127.0.0.1:4000", "description": "Reference / local development" }
+  ],
+  "tags": [
+    { "name": "Auth", "description": "User authentication and session management" },
+    { "name": "Identity", "description": "NHIA, Ghana Card, facility, personnel, patient resolution" },
+    { "name": "Clinical", "description": "Clinical engine version and assessment" },
+    { "name": "Referrals", "description": "Referral envelope lifecycle" },
+    { "name": "BedSearch", "description": "NECC bed-search engine" },
+    { "name": "Dispatch", "description": "Ambulance dispatch lifecycle" },
+    { "name": "Brokerage", "description": "Inter-region brokerage with HQ approval" },
+    { "name": "Capacity", "description": "Facility capacity board" },
+    { "name": "Escalations", "description": "Capacity / clinical escalations" },
+    { "name": "Observations", "description": "Vital sign records" },
+    { "name": "FHIR", "description": "FHIR R4 conformant interface" },
+    { "name": "Partner", "description": "Third-party API gateway (API key auth)" },
+    { "name": "Admin", "description": "Subsystem and partner administration, audit log" }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": { "type": "http", "scheme": "bearer", "bearerFormat": "JWT" },
+      "apiKeyAuth": { "type": "apiKey", "in": "header", "name": "X-API-Key" }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": ["error", "timestamp"],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": ["code", "message"],
+            "properties": {
+              "code": { "type": "string", "example": "REFERRAL_NOT_FOUND" },
+              "message": { "type": "string", "example": "Referral not found" },
+              "details": { "type": "object" }
+            }
+          },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      },
+      "LoginRequest": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": { "type": "string" },
+          "password": { "type": "string", "format": "password" },
+          "subsystem": { "type": "string", "enum": ["tablet", "portal", "necc", "arcs", "emt"] }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "accessToken": { "type": "string" },
+          "tokenType": { "type": "string", "enum": ["Bearer"] },
+          "expiresIn": { "type": "integer", "description": "seconds" },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "username": { "type": "string" },
+              "role": { "type": "string", "enum": ["admin", "doctor", "necc_operator", "arcs_dispatcher", "nas_hq", "emt", "auditor"] },
+              "facility": { "type": "string", "nullable": true },
+              "region": { "type": "string", "nullable": true }
+            }
+          }
+        }
+      },
+      "Vitals": {
+        "type": "object",
+        "properties": {
+          "sbp":  { "type": "number", "description": "systolic blood pressure (mmHg)" },
+          "dbp":  { "type": "number", "description": "diastolic blood pressure (mmHg)" },
+          "hr":   { "type": "number", "description": "heart rate (bpm)" },
+          "rr":   { "type": "number", "description": "respiratory rate (/min)" },
+          "spo2": { "type": "number", "description": "oxygen saturation (%)" },
+          "gcs":  { "type": "number", "description": "Glasgow Coma Scale (3–15)" },
+          "temperature": { "type": "number", "description": "body temperature (°C)" }
+        }
+      },
+      "EngineAssessment": {
+        "type": "object",
+        "properties": {
+          "perVital": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "tier":  { "type": "string", "enum": ["normal", "borderline", "abnormal", "critical"] },
+                "score": { "type": "integer", "minimum": 0, "maximum": 3 }
+              }
+            }
+          },
+          "totalScore":          { "type": "integer" },
+          "criticalCount":       { "type": "integer" },
+          "recommendedPriority": { "type": "string", "enum": ["critical", "high", "routine"] },
+          "engineVersion":       { "type": "string" }
+        }
+      },
+      "Referral": {
+        "type": "object",
+        "properties": {
+          "id":                 { "type": "string" },
+          "referralNumber":     { "type": "string", "example": "REF-2026-2041" },
+          "patientId":          { "type": "string" },
+          "ncrisPatientId":     { "type": "string" },
+          "fromFacilityCode":   { "type": "string", "example": "KBTH-001" },
+          "fromRegion":         { "type": "string" },
+          "targetFacilityCode": { "type": "string", "nullable": true },
+          "targetUnit":         { "type": "string", "nullable": true },
+          "condition":          { "type": "string" },
+          "reasonCode":         { "type": "string", "nullable": true, "description": "WHO ICD-10 code" },
+          "priority":           { "type": "string", "enum": ["critical", "high", "routine"] },
+          "stability":          { "type": "string", "enum": ["stable", "unstable", "unknown"] },
+          "summary":            { "type": "string" },
+          "vitals":             { "$ref": "#/components/schemas/Vitals" },
+          "engineAssessment":   { "$ref": "#/components/schemas/EngineAssessment" },
+          "state":              { "type": "string", "enum": ["draft", "submitted", "routed", "accepted", "in-transit", "completed", "declined", "cancelled"] },
+          "createdAt":          { "type": "string", "format": "date-time" },
+          "updatedAt":          { "type": "string", "format": "date-time" }
+        }
+      },
+      "Dispatch": {
+        "type": "object",
+        "properties": {
+          "id":               { "type": "string" },
+          "referralId":       { "type": "string" },
+          "condition":        { "type": "string" },
+          "priority":         { "type": "string" },
+          "fromFacilityCode": { "type": "string" },
+          "toFacilityCode":   { "type": "string" },
+          "fromRegion":       { "type": "string" },
+          "vehicleCode":      { "type": "string", "nullable": true },
+          "state":            { "type": "string", "enum": ["requested", "assigned", "en_route_pickup", "on_scene", "en_route_dest", "arrived", "cleared"] },
+          "lastGps":          { "type": "object", "nullable": true, "properties": { "lat": { "type": "number" }, "lon": { "type": "number" }, "at": { "type": "string", "format": "date-time" } } }
+        }
+      },
+      "AuditEvent": {
+        "type": "object",
+        "properties": {
+          "seq":       { "type": "integer" },
+          "prevHash":  { "type": "string" },
+          "hash":      { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "type":      { "type": "string" },
+          "action":    { "type": "string", "enum": ["C", "R", "U", "D", "E"] },
+          "actor":     { "type": "string" },
+          "actorRole": { "type": "string" },
+          "facility":  { "type": "string", "nullable": true },
+          "outcome":   { "type": "string", "enum": ["success", "failure", "incomplete"] },
+          "target":    { "type": "object", "nullable": true },
+          "detail":    { "type": "object", "nullable": true }
+        }
+      }
+    }
+  },
+  "security": [{ "bearerAuth": [] }],
+  "paths": {
+    "/healthz": {
+      "get": {
+        "tags": ["Admin"], "security": [],
+        "summary": "Liveness probe",
+        "responses": { "200": { "description": "Service is live" } }
+      }
+    },
+    "/metrics": {
+      "get": {
+        "tags": ["Admin"], "security": [],
+        "summary": "Prometheus-formatted metrics",
+        "responses": { "200": { "description": "Metric exposition", "content": { "text/plain": { "schema": { "type": "string" } } } } }
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "tags": ["Auth"], "security": [],
+        "summary": "Authenticate a user and issue an access token",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/LoginRequest" } } } },
+        "responses": {
+          "200": { "description": "OK", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/LoginResponse" } } } },
+          "401": { "description": "Bad credentials", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/api/v1/auth/me": {
+      "get": {
+        "tags": ["Auth"], "summary": "Current user claims",
+        "responses": { "200": { "description": "OK" }, "401": { "description": "Unauthenticated" } }
+      }
+    },
+    "/api/v1/clinical/engine-version": {
+      "get": {
+        "tags": ["Clinical"], "security": [],
+        "summary": "Authoritative clinical engine version",
+        "responses": { "200": { "description": "OK", "content": { "application/json": { "schema": { "type": "object", "properties": { "engineVersion": { "type": "string" } } } } } } }
+      }
+    },
+    "/api/v1/clinical/assess": {
+      "post": {
+        "tags": ["Clinical"],
+        "summary": "Server-side vital sign assessment",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "type": "object", "properties": { "vitals": { "$ref": "#/components/schemas/Vitals" }, "ageYears": { "type": "number" }, "category": { "type": "string", "enum": ["Adult", "Paediatric", "Neonate"] }, "clientAssessment": { "$ref": "#/components/schemas/EngineAssessment" } } } } }
+        },
+        "responses": { "200": { "description": "Assessment + optional client/server divergence" } }
+      }
+    },
+    "/api/v1/identity/nhia/verify": {
+      "post": {
+        "tags": ["Identity"],
+        "summary": "Verify an NHIA membership number",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "object", "required": ["membershipNumber"], "properties": { "membershipNumber": { "type": "string" } } } } } },
+        "responses": { "200": { "description": "Verification result with audit-grade lookupId" } }
+      }
+    },
+    "/api/v1/identity/ghana-card/verify": {
+      "post": {
+        "tags": ["Identity"],
+        "summary": "Verify a Ghana Card PIN (privacy-preserving hash returned)",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "object", "required": ["pin"], "properties": { "pin": { "type": "string", "example": "GHA-123456789-0" } } } } } },
+        "responses": { "200": { "description": "Format check + pinHash" } }
+      }
+    },
+    "/api/v1/identity/facilities": {
+      "get": {
+        "tags": ["Identity"], "summary": "Search MoH facility registry",
+        "parameters": [
+          { "name": "specialty", "in": "query", "schema": { "type": "string" } },
+          { "name": "region", "in": "query", "schema": { "type": "string" } },
+          { "name": "level", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "Facility list" } }
+      }
+    },
+    "/api/v1/referrals": {
+      "post": {
+        "tags": ["Referrals"], "summary": "Create a referral",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "object" } } } },
+        "responses": { "201": { "description": "Created", "content": { "application/json": { "schema": { "type": "object", "properties": { "referral": { "$ref": "#/components/schemas/Referral" }, "mpiAction": { "type": "string" }, "engineDivergence": { "type": "object", "nullable": true } } } } } } }
+      },
+      "get": {
+        "tags": ["Referrals"], "summary": "List referrals",
+        "parameters": [
+          { "name": "state", "in": "query", "schema": { "type": "string" } },
+          { "name": "fromFacility", "in": "query", "schema": { "type": "string" } },
+          { "name": "targetFacility", "in": "query", "schema": { "type": "string" } },
+          { "name": "priority", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "Referral list" } }
+      }
+    },
+    "/api/v1/referrals/{id}": {
+      "get": {
+        "tags": ["Referrals"], "summary": "Get a referral by id",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Referral" }, "404": { "description": "Not found" } }
+      }
+    },
+    "/api/v1/referrals/{id}/route": {
+      "post": {
+        "tags": ["Referrals"], "summary": "Route a referral to a target facility",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Routed" } }
+      }
+    },
+    "/api/v1/referrals/{id}/accept": {
+      "post": { "tags": ["Referrals"], "summary": "Accept a routed referral", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Accepted" } } }
+    },
+    "/api/v1/referrals/{id}/decline": {
+      "post": { "tags": ["Referrals"], "summary": "Decline a routed referral", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Declined" } } }
+    },
+    "/api/v1/bedsearch": {
+      "post": { "tags": ["BedSearch"], "summary": "Run a bed-search ranking", "responses": { "200": { "description": "Ranked candidate facilities" } } }
+    },
+    "/api/v1/dispatches": {
+      "post": { "tags": ["Dispatch"], "summary": "Request a dispatch", "responses": { "201": { "description": "Created" } } },
+      "get":  { "tags": ["Dispatch"], "summary": "List dispatches", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/v1/dispatches/{id}/assign": {
+      "post": { "tags": ["Dispatch"], "summary": "Assign a vehicle to a dispatch", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Assigned" } } }
+    },
+    "/api/v1/dispatches/{id}/transition": {
+      "post": { "tags": ["Dispatch"], "summary": "Transition dispatch to next state", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Transitioned" }, "409": { "description": "Invalid transition" } } }
+    },
+    "/api/v1/dispatches/{id}/gps": {
+      "post": { "tags": ["Dispatch"], "summary": "Record GPS ping (every 15s during transit)", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Recorded" } } }
+    },
+    "/api/v1/brokerage": {
+      "post": { "tags": ["Brokerage"], "summary": "Request inter-region brokerage", "responses": { "201": { "description": "Pending HQ" } } },
+      "get":  { "tags": ["Brokerage"], "summary": "List brokerage requests", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/v1/brokerage/{id}/approve": {
+      "post": { "tags": ["Brokerage"], "summary": "HQ approves brokerage (HQ role only)", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Approved" }, "403": { "description": "HQ role required" } } }
+    },
+    "/api/v1/brokerage/{id}/reject": {
+      "post": { "tags": ["Brokerage"], "summary": "HQ rejects brokerage", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Rejected" }, "403": { "description": "HQ role required" } } }
+    },
+    "/api/v1/escalations": {
+      "post": { "tags": ["Escalations"], "summary": "Raise an escalation", "responses": { "201": { "description": "Created" } } },
+      "get":  { "tags": ["Escalations"], "summary": "List escalations", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/v1/escalations/{id}/resolve": {
+      "post": { "tags": ["Escalations"], "summary": "Resolve an escalation", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Resolved" } } }
+    },
+    "/api/v1/capacity": {
+      "get": { "tags": ["Capacity"], "summary": "All facility capacity", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/v1/capacity/{code}": {
+      "get": { "tags": ["Capacity"], "summary": "Single facility capacity", "parameters": [{ "name": "code", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "OK" } } },
+      "put": { "tags": ["Capacity"], "summary": "Update capacity", "parameters": [{ "name": "code", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Updated" } } }
+    },
+    "/api/v1/observations": {
+      "post": { "tags": ["Observations"], "summary": "Record vital signs (server re-runs engine)", "responses": { "201": { "description": "Recorded" } } }
+    },
+    "/fhir/r4/metadata": {
+      "get": { "tags": ["FHIR"], "security": [], "summary": "FHIR CapabilityStatement", "responses": { "200": { "description": "FHIR R4 CapabilityStatement" } } }
+    },
+    "/fhir/r4/Patient/{id}": {
+      "get": { "tags": ["FHIR"], "summary": "FHIR Patient resource", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "Patient" } } }
+    },
+    "/fhir/r4/Organization": {
+      "get": { "tags": ["FHIR"], "summary": "FHIR Organization Bundle", "responses": { "200": { "description": "Bundle" } } }
+    },
+    "/fhir/r4/ServiceRequest/{id}": {
+      "get": { "tags": ["FHIR"], "summary": "FHIR ServiceRequest (referral) resource", "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "ServiceRequest" } } }
+    },
+    "/fhir/r4/AuditEvent": {
+      "get": { "tags": ["FHIR"], "summary": "FHIR AuditEvent Bundle (auditor role)", "responses": { "200": { "description": "Bundle" }, "403": { "description": "Insufficient role" } } }
+    },
+    "/api/v1/partner/health": {
+      "get": { "tags": ["Partner"], "security": [{ "apiKeyAuth": [] }], "summary": "Partner connectivity check", "responses": { "200": { "description": "OK" }, "401": { "description": "Bad / missing API key" } } }
+    },
+    "/api/v1/partner/referrals/aggregate": {
+      "get": { "tags": ["Partner"], "security": [{ "apiKeyAuth": [] }], "summary": "Aggregate referral counts (scope: referral:read:aggregate)", "responses": { "200": { "description": "OK" }, "403": { "description": "Insufficient scope" } } }
+    },
+    "/api/v1/partner/dispatches/aggregate": {
+      "get": { "tags": ["Partner"], "security": [{ "apiKeyAuth": [] }], "summary": "Aggregate dispatch counts (scope: dispatch:read:aggregate)", "responses": { "200": { "description": "OK" }, "403": { "description": "Insufficient scope" } } }
+    },
+    "/api/v1/partner/capacity/snapshot": {
+      "get": { "tags": ["Partner"], "security": [{ "apiKeyAuth": [] }], "summary": "Capacity snapshot (scope: capacity:read)", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/v1/admin/subsystems": {
+      "post": { "tags": ["Admin"], "summary": "Register a new subsystem (admin only)", "responses": { "201": { "description": "Created" } } },
+      "get":  { "tags": ["Admin"], "summary": "List subsystems (admin only)", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/v1/admin/partners": {
+      "post": { "tags": ["Admin"], "summary": "Register a new partner — returns API key once", "responses": { "201": { "description": "Created" } } },
+      "get":  { "tags": ["Admin"], "summary": "List partners", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/v1/admin/audit": {
+      "get": { "tags": ["Admin"], "summary": "Query the audit log (auditor role)", "responses": { "200": { "description": "OK" }, "403": { "description": "Insufficient role" } } }
+    },
+    "/api/v1/admin/audit/verify": {
+      "get": { "tags": ["Admin"], "summary": "Verify hash chain integrity", "responses": { "200": { "description": "{ valid, count } or { valid: false, brokenAt, reason }" } } }
+    }
+  }
+}

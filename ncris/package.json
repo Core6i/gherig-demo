@@ -1,0 +1,15 @@
+{
+  "name": "ncris",
+  "version": "1.0.0",
+  "description": "National Clinical Referral & Intelligence Switch — GhERIG backend",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/run.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "Proprietary"
+}

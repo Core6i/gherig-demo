@@ -1,0 +1,42 @@
+[
+  {
+    "id": "P-NAS-1847",
+    "council": "NAS-EMT-2021-1847",
+    "name": "Akosua Mensah",
+    "role": "EMT-A",
+    "station": "NAS Tema East",
+    "region": "GA",
+    "createdAt": "2026-05-02T10:26:28.848Z",
+    "updatedAt": "2026-05-02T10:26:28.848Z"
+  },
+  {
+    "id": "P-NAS-2109",
+    "council": "NAS-EMT-2022-2109",
+    "name": "Kwame Sarpong",
+    "role": "EMT-B",
+    "station": "NAS Tema East",
+    "region": "GA",
+    "createdAt": "2026-05-02T10:26:28.848Z",
+    "updatedAt": "2026-05-02T10:26:28.848Z"
+  },
+  {
+    "id": "P-NAS-1023",
+    "council": "NAS-DSP-2019-1023",
+    "name": "Mr. K. Owusu",
+    "role": "arcs_dispatcher",
+    "station": "NAS GA Regional",
+    "region": "GA",
+    "createdAt": "2026-05-02T10:26:28.848Z",
+    "updatedAt": "2026-05-02T10:26:28.848Z"
+  },
+  {
+    "id": "P-NAS-0045",
+    "council": "NAS-HQ-2015-0045",
+    "name": "Dr. M. Adjei",
+    "role": "nas_hq",
+    "station": "NAS HQ Accra",
+    "region": "all",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  }
+]

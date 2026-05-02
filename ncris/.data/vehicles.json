@@ -1,0 +1,46 @@
+[
+  {
+    "code": "AMB-GR-001",
+    "type": "BLS",
+    "region": "GA",
+    "district": "Tema East",
+    "station": "NAS Tema East",
+    "status": "available",
+    "id": "287d432a-b982-4364-a4e9-ad6b1d84a67d",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  },
+  {
+    "code": "AMB-GR-002",
+    "type": "BLS",
+    "region": "GA",
+    "district": "Tema East",
+    "station": "NAS Tema East",
+    "status": "available",
+    "id": "e5c5da72-46a3-4c7d-87f7-f23e68d23959",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  },
+  {
+    "code": "AMB-GR-003",
+    "type": "ALS",
+    "region": "GA",
+    "district": "Accra Central",
+    "station": "NAS Korle-Bu",
+    "status": "available",
+    "id": "a98bb90c-1eee-4ae3-a8eb-1338ebd391dc",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  },
+  {
+    "code": "AMB-GR-004",
+    "type": "BLS",
+    "region": "GA",
+    "district": "Achimota",
+    "station": "NAS Achimota",
+    "status": "available",
+    "id": "c7e688ac-89a5-475b-ad45-926fd0a406f2",
+    "createdAt": "2026-05-02T10:26:28.849Z",
+    "updatedAt": "2026-05-02T10:26:28.849Z"
+  }
+]

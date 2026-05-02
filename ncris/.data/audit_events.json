@@ -1,0 +1,1073 @@
+[
+  {
+    "seq": 1,
+    "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "timestamp": "2026-05-02T10:26:42.759Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "subsystem": "tablet"
+    },
+    "hash": "2077be5959907028bbc9eae079a723ea86a5f45ca70e61ccf2d3c4cb7e80fc0f",
+    "id": "8ef69fc6-1f38-4f39-adbe-d538f66676f2",
+    "createdAt": "2026-05-02T10:26:42.759Z",
+    "updatedAt": "2026-05-02T10:26:42.759Z"
+  },
+  {
+    "seq": 2,
+    "prevHash": "2077be5959907028bbc9eae079a723ea86a5f45ca70e61ccf2d3c4cb7e80fc0f",
+    "timestamp": "2026-05-02T10:26:42.759Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "tablet",
+      "ttlSec": 28800
+    },
+    "hash": "6527b38853a971fdab54cee80b6c9497381265fc7a7b4a1ae53f2aa06277444a",
+    "id": "f0f7ef1f-125d-4fb9-a3f3-db549ed5f5a3",
+    "createdAt": "2026-05-02T10:26:42.759Z",
+    "updatedAt": "2026-05-02T10:26:42.759Z"
+  },
+  {
+    "seq": 3,
+    "prevHash": "6527b38853a971fdab54cee80b6c9497381265fc7a7b4a1ae53f2aa06277444a",
+    "timestamp": "2026-05-02T10:26:42.923Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "76b9c3f13f4517b5"
+    },
+    "hash": "48c00d892c9f23f1e26b8f84aba0ef5ad27d511f218a6e5da7756c15d02ecd52",
+    "id": "5b63a435-0654-4e72-aeb5-3cfa91f52115",
+    "createdAt": "2026-05-02T10:26:42.923Z",
+    "updatedAt": "2026-05-02T10:26:42.923Z"
+  },
+  {
+    "seq": 4,
+    "prevHash": "48c00d892c9f23f1e26b8f84aba0ef5ad27d511f218a6e5da7756c15d02ecd52",
+    "timestamp": "2026-05-02T10:26:52.761Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "76b9c3f13f4517b5",
+      "subscriptionsAtClose": []
+    },
+    "hash": "8864e4878e31ee5c81d28f718108f4554132eb9b50d67a27f014ce73c8d801be",
+    "id": "00933b47-cab3-4145-a3dd-8c04d5373bc1",
+    "createdAt": "2026-05-02T10:26:52.761Z",
+    "updatedAt": "2026-05-02T10:26:52.761Z"
+  },
+  {
+    "seq": 5,
+    "prevHash": "8864e4878e31ee5c81d28f718108f4554132eb9b50d67a27f014ce73c8d801be",
+    "timestamp": "2026-05-02T10:26:56.102Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "99b9e06840441ee4"
+    },
+    "hash": "b722b50fa300e7ab70fbb038a9836cbf20aabc289f47aa1a83eaef941285ad7c",
+    "id": "ad6038e7-8184-40c6-b757-9aeabf56f356",
+    "createdAt": "2026-05-02T10:26:56.102Z",
+    "updatedAt": "2026-05-02T10:26:56.102Z"
+  },
+  {
+    "seq": 6,
+    "prevHash": "b722b50fa300e7ab70fbb038a9836cbf20aabc289f47aa1a83eaef941285ad7c",
+    "timestamp": "2026-05-02T10:26:56.125Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "5e8bd3caa1876faa"
+    },
+    "hash": "b23cdd5193c6a9a689a1bd3b3dee1652d49eebd91a5e16b8c378585c64697655",
+    "id": "4fd8c60e-18dd-49fa-845a-db1aa87fd25d",
+    "createdAt": "2026-05-02T10:26:56.125Z",
+    "updatedAt": "2026-05-02T10:26:56.125Z"
+  },
+  {
+    "seq": 7,
+    "prevHash": "b23cdd5193c6a9a689a1bd3b3dee1652d49eebd91a5e16b8c378585c64697655",
+    "timestamp": "2026-05-02T10:26:56.607Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "e9186a403b74c57c"
+    },
+    "hash": "feb183c06dbb1e17dcbdac91b8d2276c24a165faff73333fd675a2490c947c8b",
+    "id": "d6f1a5be-ff63-46a4-9675-39d1d559dc9e",
+    "createdAt": "2026-05-02T10:26:56.607Z",
+    "updatedAt": "2026-05-02T10:26:56.607Z"
+  },
+  {
+    "seq": 8,
+    "prevHash": "feb183c06dbb1e17dcbdac91b8d2276c24a165faff73333fd675a2490c947c8b",
+    "timestamp": "2026-05-02T10:27:03.138Z",
+    "type": "auth.user.logout",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": null,
+    "hash": "a363f6bfb1ffb3acc35dfa7886d3347ae9e905fae9e1b7b6e65a87b7089323d5",
+    "id": "9b3da8d1-6e3e-4555-8f07-af02a3cf980d",
+    "createdAt": "2026-05-02T10:27:03.138Z",
+    "updatedAt": "2026-05-02T10:27:03.138Z"
+  },
+  {
+    "seq": 9,
+    "prevHash": "a363f6bfb1ffb3acc35dfa7886d3347ae9e905fae9e1b7b6e65a87b7089323d5",
+    "timestamp": "2026-05-02T10:27:03.141Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "e9186a403b74c57c",
+      "subscriptionsAtClose": []
+    },
+    "hash": "f7371fba4b24f1ec95c26fa698722c9eeaded319d99ca26a1e925b3c0273e8f6",
+    "id": "ffc7087f-37cd-4cd4-8a74-cfda4df32799",
+    "createdAt": "2026-05-02T10:27:03.141Z",
+    "updatedAt": "2026-05-02T10:27:03.141Z"
+  },
+  {
+    "seq": 10,
+    "prevHash": "f7371fba4b24f1ec95c26fa698722c9eeaded319d99ca26a1e925b3c0273e8f6",
+    "timestamp": "2026-05-02T10:27:06.747Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "7dfb6e51-196d-4569-a7e6-6fab28fed10c",
+    "actorRole": "necc_operator",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "necc"
+    },
+    "hash": "43b7d97f249c58cc8e9c40a63ce77bec6eb1c62992f1a0c58fe554ecc3d558e4",
+    "id": "7e123cd9-b3ce-4b28-b333-1e853cb55f9f",
+    "createdAt": "2026-05-02T10:27:06.747Z",
+    "updatedAt": "2026-05-02T10:27:06.747Z"
+  },
+  {
+    "seq": 11,
+    "prevHash": "43b7d97f249c58cc8e9c40a63ce77bec6eb1c62992f1a0c58fe554ecc3d558e4",
+    "timestamp": "2026-05-02T10:27:06.748Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "7dfb6e51-196d-4569-a7e6-6fab28fed10c",
+    "actorRole": "necc_operator",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "necc",
+      "ttlSec": 28800
+    },
+    "hash": "a3d8bf52add44128c60b6379ca65f46a73adda502a38af164e06af60b73c0920",
+    "id": "eaef2fcf-4202-45f3-9c92-f26dbfcdc2d6",
+    "createdAt": "2026-05-02T10:27:06.748Z",
+    "updatedAt": "2026-05-02T10:27:06.748Z"
+  },
+  {
+    "seq": 12,
+    "prevHash": "a3d8bf52add44128c60b6379ca65f46a73adda502a38af164e06af60b73c0920",
+    "timestamp": "2026-05-02T10:27:06.851Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "7dfb6e51-196d-4569-a7e6-6fab28fed10c",
+    "actorRole": "necc_operator",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "clientId": "8efb1ecea47d3d5f"
+    },
+    "hash": "310a03d1ec7f209235204dcd82f3aec39eb5b0288818e28da00b6d2c718636f8",
+    "id": "87c405bd-3942-457b-ba7d-ececd6f77b9c",
+    "createdAt": "2026-05-02T10:27:06.851Z",
+    "updatedAt": "2026-05-02T10:27:06.851Z"
+  },
+  {
+    "seq": 13,
+    "prevHash": "310a03d1ec7f209235204dcd82f3aec39eb5b0288818e28da00b6d2c718636f8",
+    "timestamp": "2026-05-02T10:30:31.776Z",
+    "type": "auth.user.logout",
+    "action": "E",
+    "actor": "7dfb6e51-196d-4569-a7e6-6fab28fed10c",
+    "actorRole": "necc_operator",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": null,
+    "hash": "41319221d7e279a9d9e407d1813758f68e702c2ceb8602e850e1acaeb1305fbd",
+    "id": "6780ebe2-e0ca-4dc2-ab80-58a5b44e35f9",
+    "createdAt": "2026-05-02T10:30:31.776Z",
+    "updatedAt": "2026-05-02T10:30:31.776Z"
+  },
+  {
+    "seq": 14,
+    "prevHash": "41319221d7e279a9d9e407d1813758f68e702c2ceb8602e850e1acaeb1305fbd",
+    "timestamp": "2026-05-02T10:30:31.782Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "7dfb6e51-196d-4569-a7e6-6fab28fed10c",
+    "actorRole": "necc_operator",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "clientId": "8efb1ecea47d3d5f",
+      "subscriptionsAtClose": [
+        "necc.national",
+        "escalation.national"
+      ]
+    },
+    "hash": "7d848e33c465749f566e5b8b5e2d67da9315742aa8dfcb84538e12dea39fa032",
+    "id": "113f893f-5a1a-411d-a45d-b830c16386e3",
+    "createdAt": "2026-05-02T10:30:31.783Z",
+    "updatedAt": "2026-05-02T10:30:31.783Z"
+  },
+  {
+    "seq": 15,
+    "prevHash": "7d848e33c465749f566e5b8b5e2d67da9315742aa8dfcb84538e12dea39fa032",
+    "timestamp": "2026-05-02T10:30:35.073Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "subsystem": "portal"
+    },
+    "hash": "c00bee8c88f0b7aa260400c9a3c9dd2239af796b0bedb0494308025574da5134",
+    "id": "8ac5e2f0-e505-4c88-b2ed-19d25c688fba",
+    "createdAt": "2026-05-02T10:30:35.073Z",
+    "updatedAt": "2026-05-02T10:30:35.073Z"
+  },
+  {
+    "seq": 16,
+    "prevHash": "c00bee8c88f0b7aa260400c9a3c9dd2239af796b0bedb0494308025574da5134",
+    "timestamp": "2026-05-02T10:30:35.074Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "portal",
+      "ttlSec": 28800
+    },
+    "hash": "d4ffc8a2e0ee65b2b244ff407db3c059fcb4aa696b67fb96e37fc47851ad30e9",
+    "id": "2e9a583c-8499-48d4-afd9-07901b10e7e3",
+    "createdAt": "2026-05-02T10:30:35.074Z",
+    "updatedAt": "2026-05-02T10:30:35.074Z"
+  },
+  {
+    "seq": 17,
+    "prevHash": "d4ffc8a2e0ee65b2b244ff407db3c059fcb4aa696b67fb96e37fc47851ad30e9",
+    "timestamp": "2026-05-02T10:30:35.211Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "63ff3b3ca14be56b"
+    },
+    "hash": "0c1741efea839035d07f70e3cc1733e954402318efbe470e2c0f0f1aac671679",
+    "id": "0efdc6a4-7911-494d-b1f7-2362e9379c99",
+    "createdAt": "2026-05-02T10:30:35.211Z",
+    "updatedAt": "2026-05-02T10:30:35.211Z"
+  },
+  {
+    "seq": 18,
+    "prevHash": "0c1741efea839035d07f70e3cc1733e954402318efbe470e2c0f0f1aac671679",
+    "timestamp": "2026-05-02T10:32:50.203Z",
+    "type": "auth.user.logout",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": null,
+    "hash": "36610d71b49a975ccbce6f3a7142b6e435112d78027f1e971cd642c16b1b699a",
+    "id": "c0af4a1a-3e54-4cfd-90ad-16f444e8b6cd",
+    "createdAt": "2026-05-02T10:32:50.203Z",
+    "updatedAt": "2026-05-02T10:32:50.203Z"
+  },
+  {
+    "seq": 19,
+    "prevHash": "36610d71b49a975ccbce6f3a7142b6e435112d78027f1e971cd642c16b1b699a",
+    "timestamp": "2026-05-02T10:32:50.207Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "63ff3b3ca14be56b",
+      "subscriptionsAtClose": []
+    },
+    "hash": "e7dde05e4dfc4a869030a4593e5d5ff1bb615b5044454f86b146bc19b6e3cf1d",
+    "id": "7f118369-fac7-4d68-8d91-c1adcdad6cc5",
+    "createdAt": "2026-05-02T10:32:50.207Z",
+    "updatedAt": "2026-05-02T10:32:50.207Z"
+  },
+  {
+    "seq": 20,
+    "prevHash": "e7dde05e4dfc4a869030a4593e5d5ff1bb615b5044454f86b146bc19b6e3cf1d",
+    "timestamp": "2026-05-02T10:32:53.376Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "e1214815-11ae-44f7-8b65-e59e7e527f8d",
+    "actorRole": "emt",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "emt"
+    },
+    "hash": "2db9d717f7c366561d9cd8cd04fd67ab1c560ba20d0a578dcf50334020a7645a",
+    "id": "e45ad6e7-058b-4f8e-b76c-88b6a2021511",
+    "createdAt": "2026-05-02T10:32:53.376Z",
+    "updatedAt": "2026-05-02T10:32:53.376Z"
+  },
+  {
+    "seq": 21,
+    "prevHash": "2db9d717f7c366561d9cd8cd04fd67ab1c560ba20d0a578dcf50334020a7645a",
+    "timestamp": "2026-05-02T10:32:53.377Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "e1214815-11ae-44f7-8b65-e59e7e527f8d",
+    "actorRole": "emt",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "emt",
+      "ttlSec": 28800
+    },
+    "hash": "b20a189b246cf452c375e0450b658be53a450e3864a9853b21b11074c53bbfc8",
+    "id": "1ec6d335-109c-489d-b32c-dd52b2243dae",
+    "createdAt": "2026-05-02T10:32:53.377Z",
+    "updatedAt": "2026-05-02T10:32:53.377Z"
+  },
+  {
+    "seq": 22,
+    "prevHash": "b20a189b246cf452c375e0450b658be53a450e3864a9853b21b11074c53bbfc8",
+    "timestamp": "2026-05-02T10:32:53.455Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e1214815-11ae-44f7-8b65-e59e7e527f8d",
+    "actorRole": "emt",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "clientId": "792cac64272b7ee8"
+    },
+    "hash": "65ddb7bb8c4003c0c196d51669a92a3c8670a6b7d4621ad1b630a771d2c3c1f1",
+    "id": "6fd4fd6b-eb28-4489-a787-467842849b5b",
+    "createdAt": "2026-05-02T10:32:53.455Z",
+    "updatedAt": "2026-05-02T10:32:53.455Z"
+  },
+  {
+    "seq": 23,
+    "prevHash": "65ddb7bb8c4003c0c196d51669a92a3c8670a6b7d4621ad1b630a771d2c3c1f1",
+    "timestamp": "2026-05-02T10:35:28.771Z",
+    "type": "auth.user.logout",
+    "action": "E",
+    "actor": "e1214815-11ae-44f7-8b65-e59e7e527f8d",
+    "actorRole": "emt",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": null,
+    "hash": "25cd0d742a3b1e017b6d58d062ec33853a87517d5fed07d4eb76dd0466960bbf",
+    "id": "00e8bdcd-3b49-4cbe-be74-256bedab39a2",
+    "createdAt": "2026-05-02T10:35:28.771Z",
+    "updatedAt": "2026-05-02T10:35:28.771Z"
+  },
+  {
+    "seq": 24,
+    "prevHash": "25cd0d742a3b1e017b6d58d062ec33853a87517d5fed07d4eb76dd0466960bbf",
+    "timestamp": "2026-05-02T10:35:28.783Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "e1214815-11ae-44f7-8b65-e59e7e527f8d",
+    "actorRole": "emt",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "clientId": "792cac64272b7ee8",
+      "subscriptionsAtClose": []
+    },
+    "hash": "e3e2fc32787781c053cfd9a3377926779ccb3b346d1fd77ed3846cc2175303ca",
+    "id": "61f9be42-a2d9-454d-bcfc-0c475064a8d1",
+    "createdAt": "2026-05-02T10:35:28.784Z",
+    "updatedAt": "2026-05-02T10:35:28.784Z"
+  },
+  {
+    "seq": 25,
+    "prevHash": "e3e2fc32787781c053cfd9a3377926779ccb3b346d1fd77ed3846cc2175303ca",
+    "timestamp": "2026-05-02T10:35:34.108Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "c079548f-2410-4c7f-b16a-7c3d1c74cb25",
+    "actorRole": "arcs_dispatcher",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "arcs"
+    },
+    "hash": "661677d10f7f45694e897b268314bf41de8a5aa82208eaeb441a2be9588ab8d2",
+    "id": "330e16ec-07ad-40a8-8b6c-b9d19bfaa8d7",
+    "createdAt": "2026-05-02T10:35:34.108Z",
+    "updatedAt": "2026-05-02T10:35:34.108Z"
+  },
+  {
+    "seq": 26,
+    "prevHash": "661677d10f7f45694e897b268314bf41de8a5aa82208eaeb441a2be9588ab8d2",
+    "timestamp": "2026-05-02T10:35:34.110Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "c079548f-2410-4c7f-b16a-7c3d1c74cb25",
+    "actorRole": "arcs_dispatcher",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "arcs",
+      "ttlSec": 28800
+    },
+    "hash": "d5d94bec5592ffd70667532bb400d0fe0512beb8ae2cf7b65254f880493dbec4",
+    "id": "69378c92-9cdf-4124-9108-74ada0e4cf7b",
+    "createdAt": "2026-05-02T10:35:34.110Z",
+    "updatedAt": "2026-05-02T10:35:34.110Z"
+  },
+  {
+    "seq": 27,
+    "prevHash": "d5d94bec5592ffd70667532bb400d0fe0512beb8ae2cf7b65254f880493dbec4",
+    "timestamp": "2026-05-02T10:35:34.205Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "c079548f-2410-4c7f-b16a-7c3d1c74cb25",
+    "actorRole": "arcs_dispatcher",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "clientId": "1a86b2588d4e8d33"
+    },
+    "hash": "422914e856dfa3e371111d3332f98064892b0180a9597f678ba5b148e34f614e",
+    "id": "a014e3d5-15d9-4cec-878d-f735b616630d",
+    "createdAt": "2026-05-02T10:35:34.205Z",
+    "updatedAt": "2026-05-02T10:35:34.205Z"
+  },
+  {
+    "seq": 28,
+    "prevHash": "422914e856dfa3e371111d3332f98064892b0180a9597f678ba5b148e34f614e",
+    "timestamp": "2026-05-02T10:36:44.239Z",
+    "type": "auth.user.logout",
+    "action": "E",
+    "actor": "c079548f-2410-4c7f-b16a-7c3d1c74cb25",
+    "actorRole": "arcs_dispatcher",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": null,
+    "hash": "fb00a2f27c4345856101ea0d98fd702c74e8d974c27140aea5782a60377fd8c0",
+    "id": "d2885fe0-c1a0-49c8-8692-df916237e58a",
+    "createdAt": "2026-05-02T10:36:44.239Z",
+    "updatedAt": "2026-05-02T10:36:44.239Z"
+  },
+  {
+    "seq": 29,
+    "prevHash": "fb00a2f27c4345856101ea0d98fd702c74e8d974c27140aea5782a60377fd8c0",
+    "timestamp": "2026-05-02T10:36:44.244Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "c079548f-2410-4c7f-b16a-7c3d1c74cb25",
+    "actorRole": "arcs_dispatcher",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "clientId": "1a86b2588d4e8d33",
+      "subscriptionsAtClose": []
+    },
+    "hash": "b682efc8c58c811229b70d6b28b35b604193d7be11e9b191fbc3e58a387ff4d1",
+    "id": "fd1d510a-e8f6-40d0-b981-f77894804c6e",
+    "createdAt": "2026-05-02T10:36:44.244Z",
+    "updatedAt": "2026-05-02T10:36:44.244Z"
+  },
+  {
+    "seq": 30,
+    "prevHash": "b682efc8c58c811229b70d6b28b35b604193d7be11e9b191fbc3e58a387ff4d1",
+    "timestamp": "2026-05-02T10:36:48.703Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "subsystem": "portal"
+    },
+    "hash": "1e3b8c6bccb8be606fd9e8171a9c17d9502e8d5f991a4394765637ba556fe5e6",
+    "id": "e195a9b8-5379-41e1-b52a-70d4677a03cb",
+    "createdAt": "2026-05-02T10:36:48.703Z",
+    "updatedAt": "2026-05-02T10:36:48.703Z"
+  },
+  {
+    "seq": 31,
+    "prevHash": "1e3b8c6bccb8be606fd9e8171a9c17d9502e8d5f991a4394765637ba556fe5e6",
+    "timestamp": "2026-05-02T10:36:48.704Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "portal",
+      "ttlSec": 28800
+    },
+    "hash": "8e7ec3506fae51e11a831abcc0320cc40f075cfc155611e519cfcb82b82b7a95",
+    "id": "2cc41286-36c9-474f-9de6-a4bc770156ec",
+    "createdAt": "2026-05-02T10:36:48.704Z",
+    "updatedAt": "2026-05-02T10:36:48.704Z"
+  },
+  {
+    "seq": 32,
+    "prevHash": "8e7ec3506fae51e11a831abcc0320cc40f075cfc155611e519cfcb82b82b7a95",
+    "timestamp": "2026-05-02T10:36:48.714Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "a49c9cbdea5ee3a6"
+    },
+    "hash": "a25cc9cbb19d5e2ca501ee7a379751f2b9fe7092ff42c7d52e280a28a59f60d9",
+    "id": "454d4d11-5f35-4c30-a6c3-3c609cfd0b42",
+    "createdAt": "2026-05-02T10:36:48.714Z",
+    "updatedAt": "2026-05-02T10:36:48.714Z"
+  },
+  {
+    "seq": 33,
+    "prevHash": "a25cc9cbb19d5e2ca501ee7a379751f2b9fe7092ff42c7d52e280a28a59f60d9",
+    "timestamp": "2026-05-02T10:39:36.306Z",
+    "type": "auth.user.logout",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": null,
+    "hash": "05736eb4ce8b31d9f007ef0e82ee032010f692c376a24a71cf98d6fcb82147b2",
+    "id": "cd2a58c8-2a06-42d2-ae0f-2d800a9fc923",
+    "createdAt": "2026-05-02T10:39:36.306Z",
+    "updatedAt": "2026-05-02T10:39:36.306Z"
+  },
+  {
+    "seq": 34,
+    "prevHash": "05736eb4ce8b31d9f007ef0e82ee032010f692c376a24a71cf98d6fcb82147b2",
+    "timestamp": "2026-05-02T10:39:36.310Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "728d69c6-e80a-4fc7-b1bc-b88559b3afcf",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "a49c9cbdea5ee3a6",
+      "subscriptionsAtClose": []
+    },
+    "hash": "a2fc0f31a7e767531845d0f4deffb4ed3cc19a2b1134b84cddafcd9397748986",
+    "id": "f50d1aa1-4137-4032-b96c-6527b7af869c",
+    "createdAt": "2026-05-02T10:39:36.311Z",
+    "updatedAt": "2026-05-02T10:39:36.311Z"
+  },
+  {
+    "seq": 35,
+    "prevHash": "a2fc0f31a7e767531845d0f4deffb4ed3cc19a2b1134b84cddafcd9397748986",
+    "timestamp": "2026-05-02T10:39:41.442Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "subsystem": "tablet"
+    },
+    "hash": "357d8fce3fc045107e34d7386f66b3fb38a305e099fc9d2deb641f9936d8e949",
+    "id": "8be2a763-3b3c-44df-a696-48d1524f8a57",
+    "createdAt": "2026-05-02T10:39:41.442Z",
+    "updatedAt": "2026-05-02T10:39:41.442Z"
+  },
+  {
+    "seq": 36,
+    "prevHash": "357d8fce3fc045107e34d7386f66b3fb38a305e099fc9d2deb641f9936d8e949",
+    "timestamp": "2026-05-02T10:39:41.443Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "tablet",
+      "ttlSec": 28800
+    },
+    "hash": "b96e3de1e78461bf85cf9a94d1cc8bd9842d4f02540ad70c4d3a3af19a8ba5da",
+    "id": "d503946a-8f5c-44c4-96b2-10821a30d97f",
+    "createdAt": "2026-05-02T10:39:41.443Z",
+    "updatedAt": "2026-05-02T10:39:41.443Z"
+  },
+  {
+    "seq": 37,
+    "prevHash": "b96e3de1e78461bf85cf9a94d1cc8bd9842d4f02540ad70c4d3a3af19a8ba5da",
+    "timestamp": "2026-05-02T10:39:41.453Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "9caa258c6de0a9e7"
+    },
+    "hash": "c22465b7c0a22157329bd048a6ff1375a57970637b1abd54dbcfafe2b0db320f",
+    "id": "ce1ee224-839a-4182-a4d4-a871518fc844",
+    "createdAt": "2026-05-02T10:39:41.453Z",
+    "updatedAt": "2026-05-02T10:39:41.453Z"
+  },
+  {
+    "seq": 38,
+    "prevHash": "c22465b7c0a22157329bd048a6ff1375a57970637b1abd54dbcfafe2b0db320f",
+    "timestamp": "2026-05-02T10:46:23.088Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "5e8bd3caa1876faa",
+      "subscriptionsAtClose": []
+    },
+    "hash": "24e3eb1bd5fbc7105448fa251bd4241a61b2594feb14d85a949c04ad41025b25",
+    "id": "dd83cc66-3dc2-4d83-985d-117fd94f235d",
+    "createdAt": "2026-05-02T10:46:23.089Z",
+    "updatedAt": "2026-05-02T10:46:23.089Z"
+  },
+  {
+    "seq": 39,
+    "prevHash": "24e3eb1bd5fbc7105448fa251bd4241a61b2594feb14d85a949c04ad41025b25",
+    "timestamp": "2026-05-02T10:46:23.091Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "9caa258c6de0a9e7",
+      "subscriptionsAtClose": []
+    },
+    "hash": "f6fab8d80708edf51d5da8db373bbca2c15bc7040032825f7817d2e49403e7c2",
+    "id": "5a273ece-b822-465c-9366-464275fc0d30",
+    "createdAt": "2026-05-02T10:46:23.091Z",
+    "updatedAt": "2026-05-02T10:46:23.091Z"
+  },
+  {
+    "seq": 40,
+    "prevHash": "f6fab8d80708edf51d5da8db373bbca2c15bc7040032825f7817d2e49403e7c2",
+    "timestamp": "2026-05-02T10:50:48.233Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "ba7ab6828a76d0bd"
+    },
+    "hash": "af4cce8d940fa13933b0ce676a3df93ce0ad397bc0636f098cddf9401c460146",
+    "id": "dd9ca972-34ab-4940-a2a8-409b43a2b788",
+    "createdAt": "2026-05-02T10:50:48.233Z",
+    "updatedAt": "2026-05-02T10:50:48.233Z"
+  },
+  {
+    "seq": 41,
+    "prevHash": "af4cce8d940fa13933b0ce676a3df93ce0ad397bc0636f098cddf9401c460146",
+    "timestamp": "2026-05-02T10:50:48.233Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "7c6dd75d5de62439"
+    },
+    "hash": "758aea9b612d94f50f3f2706963cb3f3624602932c6fd4d8b68e56ce93d5eedc",
+    "id": "3cfa6f04-c4c4-4703-aedc-466b9186b179",
+    "createdAt": "2026-05-02T10:50:48.233Z",
+    "updatedAt": "2026-05-02T10:50:48.233Z"
+  },
+  {
+    "seq": 42,
+    "prevHash": "758aea9b612d94f50f3f2706963cb3f3624602932c6fd4d8b68e56ce93d5eedc",
+    "timestamp": "2026-05-02T10:50:48.653Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "54aa8c1672c5df1c"
+    },
+    "hash": "f3eb4617bae45fbb41afa0b48bfd26d3ad4e7795bb71f3d9537e1f758de338d8",
+    "id": "70757a44-a041-476c-8fe1-ccc9cdef7369",
+    "createdAt": "2026-05-02T10:50:48.653Z",
+    "updatedAt": "2026-05-02T10:50:48.653Z"
+  },
+  {
+    "seq": 43,
+    "prevHash": "f3eb4617bae45fbb41afa0b48bfd26d3ad4e7795bb71f3d9537e1f758de338d8",
+    "timestamp": "2026-05-02T11:00:51.100Z",
+    "type": "auth.user.logout",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": null,
+    "hash": "57960ef193a5fa8a9a0446ab179ecbf8f3f0bde4312502d8ba5fe425081e8c7b",
+    "id": "e9b995e8-1a31-472e-aad5-aa987f2f689c",
+    "createdAt": "2026-05-02T11:00:51.100Z",
+    "updatedAt": "2026-05-02T11:00:51.100Z"
+  },
+  {
+    "seq": 44,
+    "prevHash": "57960ef193a5fa8a9a0446ab179ecbf8f3f0bde4312502d8ba5fe425081e8c7b",
+    "timestamp": "2026-05-02T11:00:51.105Z",
+    "type": "auth.ws.disconnected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "54aa8c1672c5df1c",
+      "subscriptionsAtClose": []
+    },
+    "hash": "07963356b615076cc11526a3b8a0db178b7151522123076e5e842a6340421061",
+    "id": "10236de7-c585-4f3c-a571-c9666b1abc20",
+    "createdAt": "2026-05-02T11:00:51.105Z",
+    "updatedAt": "2026-05-02T11:00:51.105Z"
+  },
+  {
+    "seq": 45,
+    "prevHash": "07963356b615076cc11526a3b8a0db178b7151522123076e5e842a6340421061",
+    "timestamp": "2026-05-02T11:00:55.167Z",
+    "type": "auth.user.login",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "subsystem": "tablet"
+    },
+    "hash": "f7a4c8d6a854726ec0c5a4d86f1d65128a637f31db0e2681a15586c38aa02fb6",
+    "id": "d313e079-e428-4c6d-a059-c6838949fc7e",
+    "createdAt": "2026-05-02T11:00:55.167Z",
+    "updatedAt": "2026-05-02T11:00:55.167Z"
+  },
+  {
+    "seq": 46,
+    "prevHash": "f7a4c8d6a854726ec0c5a4d86f1d65128a637f31db0e2681a15586c38aa02fb6",
+    "timestamp": "2026-05-02T11:00:55.168Z",
+    "type": "auth.token.issued",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": null,
+    "outcome": "success",
+    "detail": {
+      "subsystem": "tablet",
+      "ttlSec": 28800
+    },
+    "hash": "b4e523debd2461e60a936b6a2284ebe53d30b3340494812e3220297e6a050f12",
+    "id": "f9d15cc4-7c7e-45f2-8378-a054369df203",
+    "createdAt": "2026-05-02T11:00:55.168Z",
+    "updatedAt": "2026-05-02T11:00:55.168Z"
+  },
+  {
+    "seq": 47,
+    "prevHash": "b4e523debd2461e60a936b6a2284ebe53d30b3340494812e3220297e6a050f12",
+    "timestamp": "2026-05-02T11:00:55.191Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "9e677b953a9edd14"
+    },
+    "hash": "ff4865ca6f9d9a61ca9e078bf057916c95a7418d2d4a708a8f05c102802e450d",
+    "id": "816eb3f1-c2a5-4b8b-b399-d9ae518e5658",
+    "createdAt": "2026-05-02T11:00:55.191Z",
+    "updatedAt": "2026-05-02T11:00:55.191Z"
+  },
+  {
+    "seq": 48,
+    "prevHash": "ff4865ca6f9d9a61ca9e078bf057916c95a7418d2d4a708a8f05c102802e450d",
+    "timestamp": "2026-05-02T11:01:56.591Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "296bb0027616338c"
+    },
+    "hash": "38f74a63f0244464bfdf533d0c3f4347d51dad5afc9648c73dcdfd26d6f4f05c",
+    "id": "32bb3e58-0baa-4e99-a322-83af8f0815a9",
+    "createdAt": "2026-05-02T11:01:56.591Z",
+    "updatedAt": "2026-05-02T11:01:56.591Z"
+  },
+  {
+    "seq": 49,
+    "prevHash": "38f74a63f0244464bfdf533d0c3f4347d51dad5afc9648c73dcdfd26d6f4f05c",
+    "timestamp": "2026-05-02T11:01:56.595Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "e59839e3c740eff5"
+    },
+    "hash": "40aaed189bf0ddad2e686c6b3e83d90f286a6ce2c3338ef1dced4138d363b3d7",
+    "id": "bad63eb5-9727-40b5-ac07-ba775ed0d992",
+    "createdAt": "2026-05-02T11:01:56.595Z",
+    "updatedAt": "2026-05-02T11:01:56.595Z"
+  },
+  {
+    "seq": 50,
+    "prevHash": "40aaed189bf0ddad2e686c6b3e83d90f286a6ce2c3338ef1dced4138d363b3d7",
+    "timestamp": "2026-05-02T11:01:57.038Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "a1a745ef6a89c46c"
+    },
+    "hash": "e9653590ccf3d84fec748d8647af25158942ebba33a3926ad82b7a32191919cc",
+    "id": "c17d0892-b431-43d7-a0e9-285b8af40998",
+    "createdAt": "2026-05-02T11:01:57.038Z",
+    "updatedAt": "2026-05-02T11:01:57.038Z"
+  },
+  {
+    "seq": 51,
+    "prevHash": "e9653590ccf3d84fec748d8647af25158942ebba33a3926ad82b7a32191919cc",
+    "timestamp": "2026-05-02T11:07:13.816Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "3aaf7751ef0818fa"
+    },
+    "hash": "983e155f4294656fffa97cb020afa930fd579f7bf3472430717bd9dec536b43e",
+    "id": "09bf48cf-0905-445a-be16-95f0faa950e8",
+    "createdAt": "2026-05-02T11:07:13.816Z",
+    "updatedAt": "2026-05-02T11:07:13.816Z"
+  },
+  {
+    "seq": 52,
+    "prevHash": "983e155f4294656fffa97cb020afa930fd579f7bf3472430717bd9dec536b43e",
+    "timestamp": "2026-05-02T11:07:13.817Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "163bb4d557afe2b8"
+    },
+    "hash": "355e507428c7b11d84ea244613f963d1cbf6e890ee6610f7fb5d826ee4210b71",
+    "id": "2ae171f1-fd40-4c82-a6d7-582e6a43918e",
+    "createdAt": "2026-05-02T11:07:13.817Z",
+    "updatedAt": "2026-05-02T11:07:13.817Z"
+  },
+  {
+    "seq": 53,
+    "prevHash": "355e507428c7b11d84ea244613f963d1cbf6e890ee6610f7fb5d826ee4210b71",
+    "timestamp": "2026-05-02T11:07:14.235Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "fbdd7835a51df73e"
+    },
+    "hash": "95cce2d41dc16ef155dc216f89983633e2ef90613da47b96936b1ebaf18fa93e",
+    "id": "c7823eb2-108c-47e5-bd21-804752ed6eaf",
+    "createdAt": "2026-05-02T11:07:14.235Z",
+    "updatedAt": "2026-05-02T11:07:14.235Z"
+  },
+  {
+    "seq": 54,
+    "prevHash": "95cce2d41dc16ef155dc216f89983633e2ef90613da47b96936b1ebaf18fa93e",
+    "timestamp": "2026-05-02T11:12:06.083Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "bfaf42f9f3a777f2"
+    },
+    "hash": "4553502eb3f85412a121321f322628aad05572eadd753e9882a1e41deeff7f65",
+    "id": "4facbfe0-935f-4170-976b-9dda7100790f",
+    "createdAt": "2026-05-02T11:12:06.083Z",
+    "updatedAt": "2026-05-02T11:12:06.083Z"
+  },
+  {
+    "seq": 55,
+    "prevHash": "4553502eb3f85412a121321f322628aad05572eadd753e9882a1e41deeff7f65",
+    "timestamp": "2026-05-02T11:12:06.085Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "217484e8234c7d03"
+    },
+    "hash": "d8d31537e72188ef9e4bd69028f13a0d0c53efbad3220b6a6514771a8787fe1d",
+    "id": "caf9d0e0-174f-4a19-b1e5-319005e31a1c",
+    "createdAt": "2026-05-02T11:12:06.085Z",
+    "updatedAt": "2026-05-02T11:12:06.085Z"
+  },
+  {
+    "seq": 56,
+    "prevHash": "d8d31537e72188ef9e4bd69028f13a0d0c53efbad3220b6a6514771a8787fe1d",
+    "timestamp": "2026-05-02T11:12:06.513Z",
+    "type": "auth.ws.connected",
+    "action": "E",
+    "actor": "e3f08aaf-d105-4db9-85b8-bea3d2bc4055",
+    "actorRole": "doctor",
+    "target": null,
+    "facility": "KBTH-001",
+    "outcome": "success",
+    "detail": {
+      "clientId": "ece77af869effb20"
+    },
+    "hash": "ec84a93d0088d50616c41a9b640b7eb09e8e9b75ad39dd1534e265973c464a1b",
+    "id": "19db4eda-66bc-458a-ba4f-d76f081ed00a",
+    "createdAt": "2026-05-02T11:12:06.513Z",
+    "updatedAt": "2026-05-02T11:12:06.513Z"
+  }
+]
