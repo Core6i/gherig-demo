@@ -261,26 +261,25 @@ async function main() {
 
   // HTTP server
   const server = http.createServer((rawReq, rawRes) => {
-  const req = rawReq;
-  const res = wrapResponse(rawRes);
+    // CORS headers must be set on the raw Node response before routing,
+    // including OPTIONS preflight requests from the Vercel frontend.
+    rawRes.setHeader("Access-Control-Allow-Origin", "*");
+    rawRes.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
+    rawRes.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  // ✅ Proper CORS headers
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    if (rawReq.method === "OPTIONS") {
+      rawRes.writeHead(204);
+      rawRes.end();
+      return;
+    }
 
-  // ✅ Handle preflight requests
-  if (req.method === "OPTIONS") {
-    res._raw.writeHead(204);
-    res._raw.end();
-    return;
-  }
-
-  router.handle(req, res).catch(err => {
-    logger.error({ event: 'router.unhandled', error: err.message, stack: err.stack });
-    if (!res._sent) res.error(500, 'INTERNAL_ERROR', 'Unhandled error');
+    const res = wrapResponse(rawRes);
+    router.handle(rawReq, res).catch(err => {
+      logger.error({ event: 'router.unhandled', error: err.message, stack: err.stack });
+      if (!res._sent) res.error(500, 'INTERNAL_ERROR', 'Unhandled error');
+    });
   });
-});
+
   // WebSocket upgrade — same port as HTTP
   server.on('upgrade', (req, socket, head) => {
     const url = new URL(req.url, 'http://localhost');
